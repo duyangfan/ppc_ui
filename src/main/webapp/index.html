@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>title</title>
+        <style type="text/css">
+            *{
+                /**
+                  浏览器渲染引擎名称：
+                  google:webkit
+                  ie:trident
+                  fireFox:gecko
+                  google :v8
+                */
+
+                margin: 0;
+                padding: 0;
+                -webkit-user-select: none;
+
+            }
+            header{
+                width: 100%;
+                height:100px;
+            }
+            main{
+                width: 100%;
+                height:450px;
+
+            }
+            main aside{
+                width: 20%;
+                height: 100%;
+                float: left;
+            }
+            main article{
+                width: 80%;
+                height: 100%;
+                float: left;
+            }
+            footer{
+                width: 100%;
+                height: 100px;
+
+            }
+
+            summary{
+                outline: none;
+            }
+            mark{
+                background-color: red;
+            }
+
+        </style>
+
+
+
+    </head>
+    <body>
+
+        <!--W3C 语义化：有利于搜索引擎优化 seo优化-->
+        <!--时间-->
+        <time>9:45</time>
+
+        <audio autoplay controls loop="1">
+            <source src="sfasf"/>
+            <source src="dfafa"/>
+        </audio>
+
+        <video width="200" height="200" controls>
+            <source src="sfasf.mp4"/>
+            <source src="dfafa"/>
+        </video>
+
+        <details>
+            <summary>URL</summary>
+            <a href="music.html">音频</a>
+            <a href="upload.html">upload</a>
+            <a href="SelectTag.html">选项卡</a>
+        </details>
+
+
+        <details>
+            <summary>水果</summary>
+            <p>苹果</p>
+            <p>橘子</p>
+            <p>栗子</p>
+        </details>
+
+        <!--媒介-->
+        <figure>
+            <figcaption>图片</figcaption>
+            <img src="img/inf1o.jpg" alt="">
+        </figure>
+
+        <!--进度条-->
+        <progress min="0" max="100" value="20"></progress>
+
+
+        <p>这是<mark>标记</mark>标签</p>
+
+        <form>
+            <label for="userId">
+                <input type="text" name="userId" id="userId">
+            </label><br>
+            <input type="email" placeholder="邮箱" required>
+            <input type="tel" placeholder="手机号" pattern="/d">
+            <input type="url" placeholder="网址">
+            <input type="search" placeholder="搜索" autofocus>
+            <input type="range" min="0" max="100" value="50" step="10">
+            <input type="color" placeholder="颜色" id="colVal">
+            <br>
+            <input type="date"><input type="time"><br>
+            <input type="datetime-local"><br>
+            <input type="month"><input type="week">
+            <input type="submit" value="OK">
+        </form>
+
+
+
+
+
+
+        <!-- 头标签-->
+        <header>
+            <nav>
+                <a href="">A</a>
+                <a href="">B</a>
+                <a href="">C</a>
+                <a href="">D</a>
+            </nav>
+        </header>
+
+
+        <!--主题内容-->
+        <main>
+            <!--侧边栏标签-->
+            <aside>
+
+            </aside>
+
+            
+            <!--文章内容-->
+            <article></article>
+        </main>
+
+        <!--尾-->
+        <footer>
+
+        </footer>
+
+    </body>
+
+    <script>
+        document.getElementById("colVal").onchange=function () {
+            document.body.style.backgroundColor=this.value;
+        };
+        var audio = document.getElementsByTagName("audio")[0];
+        console.dir(audio)
+        var lis = document.querySelectorAll("li");
+        console.log(lis)
+        document.querySelector("").classList.add("");
+        document.querySelector("").classList.remove("");
+        document.querySelector("").classList.contains("");
+        document.querySelector("").classList.toggle("");
+    </script>
+
+</html>

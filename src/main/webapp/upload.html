@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            #box{
+                width: 100px;
+                height: 100px;
+                border-radius: 10%;
+                background-color: gold;
+            }
+            #target{
+                position: absolute;
+                left: 500px;
+                top: 100px;
+                width: 400px;
+                height: 400px;
+                border: 1px solid black;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--draggable  设置元素是否可拖-->
+        <div draggable="true" id="box">
+
+        </div>
+
+        <div id="target">
+            <p>请将图片拖拽到次区域</p>
+        </div>
+    </body>
+    <script>
+        /**
+         * 应用于被拖拽元素
+         * ondrag  整个拖拽过程会持续调用
+         * ondragstart  开始拖拽时调用
+         * ondragleave  鼠标离开元素调用
+         * ondragend  拖拽结束调用
+         * */
+      /*  var box=document.querySelector("#box");
+        box.ondrag=function(){
+            console.log("开始")
+        }
+        box.ondragstart=function(){
+            console.log("正在拖拽")
+        }
+        box.ondragleave=function(){
+            console.log("离开原位置")
+        }
+        box.ondragen=function(){
+            console.log("结束")
+        }
+
+        /!**
+         * 目标元素：
+         * */
+        var target=document.querySelector("#target");
+        var p = document.querySelector("p");
+        target.addEventListener("dragenter",function () {
+
+        })
+        target.addEventListener("dragenter",function () {
+            p.innerHTML="释放";
+        })
+        target.addEventListener("dragleave",function(){
+            p.innerHTML="请将图片拖拽到次区域"
+        })
+        target.addEventListener("dragover",function (e) {
+            e.preventDefault();
+
+        })
+        target.addEventListener("drop",function (e) {
+            e.preventDefault()
+            var files=e.dataTransfer.files;
+            for (var i=0;i<files.length;i++){
+                var fr=new FileReader();
+                fr.readAsDataURL(files[i])
+                fr.onload=function () {
+                    var img=new Image();
+                    img.src=this.result;
+                    target.appendChild(img);
+                }
+            }
+        })
+      
+      
+      
+      
+
+    </script>
+</html>
