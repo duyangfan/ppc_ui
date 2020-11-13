@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS3：伪类选择器演示</title>
+        <style type="text/css">
+            /**lvht
+             *
+             */
+            a{
+                text-decoration: none;
+            }
+            a:link{
+                background-color: red;
+            }
+            a:active{
+                background-color: violet;
+            }
+            a:visited{
+                background-color: darkblue;
+            }
+            a:hover{
+                background-color: black;
+            }
+            .box{
+                width: 50px;
+                height: 50px;
+                background-color: red;
+
+                margin:0 auto;
+            }
+            .pbox{
+                width: 100px;
+            }
+
+            .pbox div:nth-child(2){
+                background-color: gold;
+            }
+            .pbox span:nth-child(3){
+                background-color: aqua;
+            }
+            .pbox div:first-child{
+                border-radius: 20%;
+            }
+            .pbox div:last-child{
+                background-color: violet;
+            }
+            .pbox div:nth-last-child(4){
+                background-color: black;
+                border-radius: 10%;
+            }
+
+            /**
+            add 是奇数    even  是偶数
+
+            */
+            .pbox div:nth-child(add){
+                background-color: gold;
+            }
+            .pbox div:nth-child(even){
+                background-color: gold;
+            }
+            .pbox div:nth-child(2n+1){
+                border: 2px solid black;
+            }
+            /*
+            选择前五个 n从1开始  为负数不能选择
+            */
+            .pbox div:nth-child(-n+2){
+                border: 3px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pbox">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+    <script>
+
+    </script>
+</html>

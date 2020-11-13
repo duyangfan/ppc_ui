@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+
+            #box{
+                width: 420px;
+                height: 420px;
+                border-radius: 20%;
+                margin-left: 100px;
+                margin-top: 100px;
+                background-color: gold;
+                position: relative;
+            }
+            #box:before{
+                position: absolute;
+                left: 100px;
+                top:-80px;
+                display: block;
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 40px solid transparent;
+                border-bottom: 40px solid gold;
+                border-left: 40px solid transparent;
+                border-right: 40px solid transparent;
+
+            }
+
+            /**
+            清除浮动
+            */
+           /* #box:after{
+                display: block;
+                content: '';
+                clear:both;
+                visibility: hidden;
+                font-size: 0;
+                line-height: 0;
+            }*/
+
+            /**
+            三角形 border
+            */
+
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="box"></div>
+
+
+    </body>
+</html>

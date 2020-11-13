@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            body{
+                background-color: #c1c1c1;
+            }
+            p{
+                font-size: 100px;
+                font-weight: bold;
+                /*
+                    文本阴影
+                    属性1：阴影水平偏移
+                    属性2：阴影Y偏移
+                    属性3：模糊半径
+                    属性4：color
+
+                    可以重复设置多个阴影
+                */
+
+                /*text-shadow:1px 1px 0px rgb(255,0,0);*/
+            }
+
+
+            p:nth-child(1){
+                color:#808080;
+                text-shadow: -2px -2px 0 #000,2px 2px 0 #ffffff;
+            }
+
+            p:nth-child(2){
+                color:#808080;
+                text-shadow: 200px 20px 0 gold,-20px -20px 0 red,20px -20px 0 blue;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <p>文本阴影设置</p>
+        <p>文本阴影设置</p>
+    </body>
+</html>
