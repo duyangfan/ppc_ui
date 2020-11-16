@@ -102,3 +102,68 @@ background-size:设置背景尺寸的大小 X Y :会导致图片变形  不会�
                contain：竟可能显示整个背景图，可能有一部分区域覆盖不到
 
 ```
+###过渡属性
+```aidl
+  transition-property 过渡属性
+           transition-duration:过渡时间
+           transition-timing-function:设置过渡速度  用来控制速度  linear(匀速)  ease-in(加速)
+           transition-delay 设置过渡延时   超过时间后执行动画
+           可以复合使用：transition:all linear 1s 2s
+           
+ eg:
+  #box:hover{
+                 width: 500px;
+                 background-color:black;
+                 transiton-property:width;
+                 transition-duration: 3s;
+                 transition-timing-function:ease-in;
+                 transition-delay:1s;
+             }
+```
+###2d变换：
+```aidl
+
+            #box{
+                width: 300px;
+                height: 300px;
+                background-color: rgb(228,141,141);
+
+                transition:all 2s;
+            }
+
+            #box:hover{
+                /* 变换：位移     变换中心点：transform-origin:x，y   center/top/left/right*/
+                transform: translateX(200px);
+                transform: translateY(200px);
+                transform: translate(200px,300px);
+                /*  旋转  */
+                transform: rotate(-90deg);
+                /* 缩放 x,y
+                */
+                transform: scaleX(0.6);
+                /* 斜*/
+                transform: skew(15deg);
+            }
+            #box{
+                width: 300px;
+                height: 300px;
+                background-color: rgb(228,141,141);
+
+                transition:all 2s;
+            }
+
+            #box:hover{
+                /* 变换：位移     变换中心点：transform-origin:x，y   center/top/left/right*/
+                transform: translateX(200px);
+                transform: translateY(200px);
+                transform: translate(200px,300px);
+                /*  旋转  */
+                transform: rotate(-90deg);
+                /* 缩放 x,y
+                */
+                transform: scaleX(0.6);
+                /* 斜*/
+                transform: skew(15deg);
+            }
+```
+

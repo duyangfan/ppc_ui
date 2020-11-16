@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+
+            #box{
+                width: 300px;
+                height: 300px;
+                background-color: rgb(228,141,141);
+
+                transition:all 2s;
+            }
+
+            #box:hover{
+                /* 变换：位移     变换中心点：transform-origin:x，y   center/top/left/right*/
+                transform: translateX(200px);
+                transform: translateY(200px);
+                transform: translate(200px,300px);
+                /*  旋转  */
+                transform: rotate(-90deg);
+                /* 缩放 x,y
+                */
+                transform: scaleX(0.6);
+                /* 斜*/
+                transform: skew(15deg);
+            }
+
+        </style>
+
+    </head>
+    <body>
+        位移 旋转  缩放  斜切</br>
+        2d 平面 X轴 Y轴</br>
+        <div id="box"></div>
+
+        
+    </body>
+</html>
