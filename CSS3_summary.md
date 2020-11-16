@@ -166,4 +166,39 @@ background-size:设置背景尺寸的大小 X Y :会导致图片变形  不会�
                 transform: skew(15deg);
             }
 ```
+####动画
+```aidl
+ 关键帧动画
+            @keyframes name{
+                from{
 
+                }
+                to{
+
+                }
+            }
+            @keyframes name{
+                0%{
+
+                }
+                10%{
+
+                }
+            }
+调用方式：animation属性调用
+        animation-name: action;
+        animation-duration: 1s; !*持续时间*!
+        animation-delay: 2s;!*延时*!
+        animation-timing-function: cubic-bezier(0.79,-0.6, 1, 1.7); !*动画播放速度 linear：匀速-ease-in-out ease-in ease-out step()步长*!
+        animation-iteration-count: 2; !*播放次数 默认播放一次 无限 infinite*!
+        animation-fill-mode:backwards ; !*动画结束状态  backwards :默认恢复到开始 forwards:结束状态*!
+        animation-play-state: running; !*动画播放和暂停属性   默认running  paused  暂停*!
+        animation-direction:alternate ;!* 默认normal   倒放 alternate 倒放*!
+        animation: action 2s linear 2 alternate forwards running;
+        
+```
+
+####补充属性
+```aidl
+半透明属性：opacity: 0.6;
+```

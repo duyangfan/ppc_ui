@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+
+            html,
+            body{
+                height:100%;
+                background-color: black;
+            }
+
+            /**
+               transform-origin:x  y    旋转中心点
+               背面隐藏：backface-visibility:visible 可见  hidden:隐藏
+            */
+            #box{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                border-radius: 50%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+               /* perspective: 500px;*/
+                animation: rota 9.5s linear infinite;
+                /*
+                   当前元素内部所有元素 都置于一个3d 同时把perspective: 500px;去掉
+                */
+
+                transform-style: preserve-3d;
+
+            }
+            section{
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+                color: white;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+
+            }
+            section:nth-child(1){
+                background-color: rgba(255,0,0,0.5);
+                transform:rotateY(90deg) translateZ(-100px);
+            }
+            section:nth-child(2){
+                background-color: rgba(0,255,0,0.5);
+                transform:rotateY(-90deg) translateZ(-100px);
+            }
+            section:nth-child(3){
+                background-color: rgba(255,0,255,0.5);
+                transform:rotateX(90deg) translateZ(100px);
+            }
+            section:nth-child(4){
+                background-color: rgba(0,0,255,0.5);
+                transform:rotateX(90deg) translateZ(-100px);
+            }
+            section:nth-child(5){
+                background-color: rgba(234, 255, 114,0.5);
+                transform: translateZ(100px);
+            }
+            section:nth-child(6){
+                background-color: rgba(43,255,0,0.5);
+                transform:translateZ(-100px);
+            }
+
+            @keyframes rota {
+                from{
+                    transform: translate(-50%,-50%) rotateX(0deg) rotateY(0deg);
+                }
+                to{
+                    transform: translate(-50%,-50%) rotateX(300deg) rotateY(130deg);
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+
+        -->
+
+        <div id="box">
+            <section>左</section>
+            <section>右</section>
+            <section>上</section>
+            <section>下</section>
+            <section>前</section>
+            <section>后</section>
+        </div>
+    </body>
+</html>
