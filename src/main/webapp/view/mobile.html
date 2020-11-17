@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <title></title>
+
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+
+            body{
+                display: flex;
+                justify-content: flex-start;
+            }
+            div{
+                width: 10rem;
+                height: 10rem;
+                background-color: red;
+                border: 1px black solid;
+            }
+
+            /*
+                移动端适配问题
+                rem :根据html根元素的字体大小变化而变化
+                var fontSize=cw/40px
+                1rem=fontSize
+                <script>
+                    var cw = document.documentElement.clientWidth;
+
+                    document.querySelector("html").style.fontSize=cw/40+"px";
+                </script>
+
+
+             */
+        </style>
+
+
+
+    </head>
+
+    <body>
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </body>
+    <script>
+        var cw = document.documentElement.clientWidth;
+        document.querySelector("html").style.fontSize=cw/40+"px";
+    </script>
+</html>

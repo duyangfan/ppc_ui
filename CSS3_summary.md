@@ -198,7 +198,63 @@ background-size:设置背景尺寸的大小 X Y :会导致图片变形  不会�
         
 ```
 
+####flex
+```aidl
+ /*
+                flex
+                给父级添加的属性
+                1.将父级元素 设置为弹性盒子 display:flex
+                justify-content:调整内部子元素在主轴上的对齐方式
+                    flex-start :默认  主轴起点对齐
+                    flex-end:  终点对齐
+                    center:中点对齐
+                    space-around:均匀分布
+                    space-between：两端
+                align-item:     调整侧轴方向的布局方式  竖轴
+                    stretch：在整个父级高度拉伸
+                flex_direction  调整主轴方向
+                    row:默认
+                    column:竖直
+                    row-reverse:从右向左方向
+                flex-wrap:控制是否换行   默认不换行
+                    warp :换行
+                    no-warp:默认不换行
+                align-content:元素堆叠方式
+                    flex-start:
+                    flex-end
+                    center
+                    space-around
+
+
+
+               给子元素添加的属性：
+               flex:  每一个元素所占的分数
+               order:   排列顺序  数值越小越靠前 默认为0
+               align-self: 调整自身的垂直方式
+
+
+
+            */
+```
+
+
 ####补充属性
 ```aidl
 半透明属性：opacity: 0.6;
+针对移动端的标签
+width=device-width 让当前的可视化区域的宽度 等于设备的web页面css逻辑像素宽度   
+initatil-scale=1.o  初始化缩放比例  
+user-scalable=no 是否允许用户缩放
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+  移动端适配方案：flex+rem实现
+rem :根据html根元素的字体大小变化而变化
+var fontSize=cw/40px
+1rem=fontSize
+<script>
+    var cw = document.documentElement.clientWidth;
+
+    document.querySelector("html").style.fontSize=cw/40+"px";
+</script>
+
 ```
